@@ -280,7 +280,7 @@ export default function BusinessDetailPage() {
                   if (!user) {
                     router.push(`/auth/login?return=/business/${id}`);
                   } else {
-                    router.push("/dashboard/messages");
+                    router.push(`/dashboard/messages?uid=${business?.ownerId}`);
                   }
                 }}
                 className="flex-1 sm:flex-none h-12 sm:h-14 px-6 sm:px-8 bg-primary text-black font-bold rounded-full hover:brightness-110 transition-all flex items-center justify-center gap-2 text-sm sm:text-base"
